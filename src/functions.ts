@@ -312,11 +312,11 @@ export const transformJsonContent = (jsonContent: MendixXML, widgetName: string)
         });
     }
 
-    if (!jsonContent.widget.$.hasOwnProperty("pluginWidget") || jsonContent.widget.$.pluginWidget === "false") {
-        throw new PluginError("Typing generation", {
-            message: "[XML] Attribute pluginWidget=true not found. Please review your XML"
-        });
-    }
+    // if (!jsonContent.widget.$.hasOwnProperty("pluginWidget") || jsonContent.widget.$.pluginWidget === "false") {
+    //     throw new PluginError("Typing generation", {
+    //         message: "[XML] Attribute pluginWidget=true not found. Please review your XML"
+    //     });
+    // }
 
     if (jsonContent.widget.$.hasOwnProperty("supportedPlatform") && jsonContent.widget.$.supportedPlatform === "All") {
         throw new PluginError("Typing generation", {
