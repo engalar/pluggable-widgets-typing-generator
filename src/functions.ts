@@ -410,7 +410,10 @@ ${modelerVisibilityMap}
     const commonProps = !mobile
         ? `class: string;
     style?: CSSProperties;
-    tabIndex: number;`
+    friendlyId?: string;
+    tabIndex: number;
+    mxform: mxui.lib.form._FormBase;
+    mxObject?: mendix.lib.MxObject;`
         : "style: Style[];";
     return `/**
  * This file was generated from ${widgetName}.xml
